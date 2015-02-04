@@ -1,0 +1,21 @@
+{
+":dataSubType": "phenotype", 
+"upToDate": "4.0_nte,4.0,2.1,1.5", 
+"wrangler": "cgData TCGAscript Clinical processed on 2014-08-22,cgData TCGAscript oldClin processed on 2014-08-22,cgData TCGAscript survival processed on 2014-08-22,cgData TCGAscript Clinical processed on 2014-08-22", 
+"redistribution": true, 
+":clinicalFeature": "BRCA_clinicalFeature", 
+"shortTitle": "BRCA Nature 2012 STable 1 sheet 1 tumor information,PAM50_RNAseq,BRCA Nature 2012 STable 1 sheet 1 patient information", 
+"cohort": "TCGA.BRCA.sampleMap", 
+"url": "https://tcga-data.nci.nih.gov/tcgafiles/ftp_auth/distro_ftpusers/anonymous/tumor/brca/bcr/", 
+"description": "This dataset is the TCGA Breast Cancer (BRCA) clinical data.,TCGA BRCA sample PAM50 call PAM50 calls for RNAseq obtained from unc,This dataset is the TCGA Breast Cancer (BRCA) clinical data.,This dataset is the TCGA Breast Cancer (BRCA) clinical data.", 
+":sampleMap": "TCGA.BRCA.sampleMap", 
+"label": "Phenotypes", 
+"wrangling_procedure": "Clinical data download from TCGA DCC, processed at UCSC into cgData repository,old clinical data that is deprecated in the current version,https://groups.google.com/forum/?fromgroups#!topic/ucsc-cancer-genomics-browser/YvKnWZSsw1Q,Clinical data download from TCGA DCC, processed at UCSC into cgData repository", 
+"longTitle": "TCGA BRCA clinical data from Nature 2012 STable1 sheet 1 tumor information,PAM50 calls for RNAseq,TCGA BRCA clinical data from Nature 2012 STable1 sheet 1 patient information", 
+"version": "2014-08-22", 
+"dataProducer": "TCGA biospecimen core resource,http://www.nature.com/nature/journal/v490/n7418/full/nature11412.html#supplementary-information,https://www.synapse.org/#!Synapse:syn1712142,https://www.synapse.org/#!Synapse:syn1688309,TCGA biospecimen core resource,https://www.synapse.org/#!Synapse:syn1756922,https://www.synapse.org/#!Synapse:syn1701558,https://www.synapse.org/#!Synapse:syn2492003,unc,TCGA biospecimen core resource,http://www.nature.com/nature/journal/v490/n7418/full/nature11412.html#supplementary-information,UCSC,UCSC,https://www.synapse.org/#!Synapse:syn2487022,https://www.synapse.org/#!Synapse:syn1715788,https://www.synapse.org/#!Synapse:1875816,https://www.synapse.org/#!Synapse:2027079,TCGA biospecimen core resource", 
+"cgDataVersion": 1, 
+"type": "clinicalMatrix", 
+"outOfDate": "Yes", 
+"name": "BRCA_clinicalMatrix"
+}

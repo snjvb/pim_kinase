@@ -1,0 +1,12 @@
+{
+"cohort": "YauClinical_public", 
+"wrangler": "Mia Grifford", 
+":clinicalFeature": "YauClinical_public_clinicalFeature", 
+"notes": "", 
+":sampleMap": "YauClinical_public", 
+"version": "2011-11-11", 
+"path": "data_flatten/public/other/YauClinical_public/YauClinical_public_clinicalMatrix", 
+"cgDataVersion": "1", 
+"type": "clinicalMatrix", 
+"name": "YauClinical_public_clinicalMatrix"
+}

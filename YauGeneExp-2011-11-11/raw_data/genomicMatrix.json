@@ -1,0 +1,41 @@
+{
+"domain": "literature", 
+"citation": "Breast Cancer Res. 2010 Oct 14;12(5):R85.", 
+"wrangling_procedure": "Data from Dr. Christina Yau at Buck Inst.  Christina integrated array data from four independent studies GSE2034, GSE5327, GSE7390, NKI295, array data is adjusted using DWD to minimize batch effect between the four different studies.", 
+"owner": "literature", 
+"dataProducer": "Christina Yau, Laura Esserman, Dan H Moore, Fred Waldman, John Sninsky, Christopher C Benz", 
+"cgDataVersion": 1, 
+"cohort": "YauClinical_public", 
+"tags": [
+"cancer"
+], 
+":sampleMap": "YauClinical_public", 
+"sample_type": [
+"tumor"
+], 
+"label": "Yau Gene Exp", 
+"version": "2011-11-01", 
+"gdata_tags": [
+"transcription", 
+"mRNA"
+], 
+":probeMap": "hugo", 
+"type": "genomicMatrix", 
+"anatomical_origin": [
+"Breast"
+], 
+"longTitle": "Yau Gene Expression", 
+"gain": 1.5, 
+"projectGroup": "public", 
+"path": "data_flatten/public/other/YauClinical_public/YauGeneExp_genomicMatrix", 
+":dataSubType": "geneExp", 
+"wrangler": "Mia Grifford", 
+"redistribution": true, 
+"name": "YauGeneExp", 
+"shortTitle": "Yau Gene Exp", 
+"url": "http://www.ncbi.nlm.nih.gov/pubmed/20946665", 
+"primary_disease": "breast cancer", 
+"articleTitle": "A multigene predictor of metastatic outcome in early stage hormone receptor-negative and triple-negative breast cancer.", 
+"security": "public", 
+"groupTitle": "other breast cancer from literature"
+}

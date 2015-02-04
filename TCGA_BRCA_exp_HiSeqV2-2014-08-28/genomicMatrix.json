@@ -1,0 +1,44 @@
+{
+"domain": "TCGA", 
+"wrangling_procedure": "Level_3 Data (file names: *.rsem.genes.normalized_results) download from TCGA DCC, log2(x+1) transformed, and processed at UCSC into cgData repository", 
+"expressionDataSpace": "log", 
+"owner": "TCGA", 
+"dataProducer": "University of North Carolina TCGA genome characterization center", 
+"description": "TCGA breast invasive carcinoma (BRCA) gene expression by RNAseq.<br><br> The gene expression profile was measured experimentally using the Illumina HiSeq 2000 RNA Sequencing platform by the University of North Carolina TCGA genome characterization center. Level 3 interpreted level data was downloaded from TCGA data coordination center. This dataset shows the gene-level transcription estimates, as in RSEM normalized count. Genes are mapped onto the human genome coordinates using UCSC cgData HUGO probeMap. Reference to method description from University of North Carolina TCGA genome characterization center: <a href=\"https://tcga-data.nci.nih.gov/tcgafiles/ftp_auth/distro_ftpusers/anonymous/tumor/brca/cgcc/unc.edu/illuminahiseq_rnaseqv2/rnaseqv2/unc.edu_BRCA.IlluminaHiSeq_RNASeqV2.Level_3.1.9.0/DESCRIPTION.txt\" target=\"_blank\"><u>DCC description</u></a><br><br>In order to more easily view the differential expression between samples, we set the default view to center each gene or exon to zero by independently subtracting the mean of the genomic location on the fly. Users can view the original non-normalized values by uncheck the \"Normalize\" option. For more information on how to use the cancer browser, please refer to the help page.<br><br>", 
+"cohort": "TCGA.BRCA.sampleMap", 
+"min": -1.0, 
+"tags": [
+"cancer"
+], 
+":sampleMap": "TCGA.BRCA.sampleMap", 
+"sample_type": [
+"tumor"
+], 
+"label": "BRCA gene expression (IlluminaHiSeq)", 
+"PLATFORM": "IlluminaHiSeq_RNASeqV2", 
+"version": "2014-08-28", 
+"gdata_tags": [
+"transcription"
+], 
+":probeMap": "hugo", 
+"type": "genomicMatrix", 
+"colNormalization": true, 
+"anatomical_origin": [
+"Breast"
+], 
+"max": 1.0, 
+"longTitle": "TCGA breast invasive carcinoma (BRCA) gene expression by RNAseq (IlluminaHiSeq)", 
+"gain": 1.0, 
+"path": "data/public/TCGA/BRCA/HiSeqV2", 
+"cgDataVersion": 1, 
+":dataSubType": "gene expression RNAseq", 
+"wrangler": "cgData TCGAscript RNAseq processed on 2014-08-28", 
+"redistribution": true, 
+"name": "TCGA_BRCA_exp_HiSeqV2", 
+"shortTitle": "BRCA gene expression (IlluminaHiSeq)", 
+"url": "https://tcga-data.nci.nih.gov/tcgafiles/ftp_auth/distro_ftpusers/anonymous/tumor/brca/cgcc/unc.edu/illuminahiseq_rnaseqv2/rnaseqv2/", 
+"notes": "the probeMap is hugo for the short term, however probably around 10% of the gene symbols are not HUGO names, but ENTRE genes", 
+"security": "public", 
+"groupTitle": "TCGA breast invasive carcinoma", 
+"primary_disease": "breast invasive carcinoma"
+}

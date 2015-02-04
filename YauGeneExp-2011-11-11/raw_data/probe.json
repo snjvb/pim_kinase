@@ -1,0 +1,12 @@
+{
+":assembly": "hg18", 
+"cgDataVersion": 1, 
+"group": "hugo", 
+"name": "hugo_hg18", 
+"notes": "1.produced by Kord's program collapseHugo.py, see cancerWiki topic HUGOunion. 2. coordinates after modification is 1-based 3. hugo info itself is downloaded in 2010, need update 4.missing genes detected by spot checking: SGK493 and total of 2235 genes in hugo_refGene  5. critical missing piece, no alias reference in the datafile, alias portion is simply duplication of gene name in the first column, do not match previous symbol and Synonyms matching yet, code exists 6. changed 183ActI to 183 ActI and EBIActI to EBI ActI", 
+"path": "data_flatten/probeMap/collapsed_hugo_symbols_aliases_only_hg18.probeMap", 
+"title": "hugo symbol coordinates derived from Kord's script using tables from UCSC genome browser database and hugo download", 
+"type": "probeMap", 
+"version": "2012-05-14", 
+"wrangler": "Jing Zhu"
+}

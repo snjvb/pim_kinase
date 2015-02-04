@@ -1,0 +1,19 @@
+{
+"wrangler": "Mia Grifford", 
+"name": "YauClinical_public", 
+"tags": [
+"cancer"
+], 
+"primary_disease": "breast cancer", 
+"anatomical_origin": [
+"Breast"
+], 
+"domain": "literature", 
+"sample_type": [
+"tumor"
+], 
+"version": "2011-11-011", 
+"path": "data_flatten/public/other/YauClinical_public/YauClinical_public_sampleMap", 
+"type": "sampleMap", 
+"cgDataVersion": "1"
+}

@@ -1,0 +1,10 @@
+{
+"cgDataVersion": "1", 
+"description": "", 
+"name": "YauClinical_public_clinicalFeature", 
+"notes": "", 
+"path": "data_flatten/public/other/YauClinical_public/YauClinical_public_clinicalFeature", 
+"type": "clinicalFeature", 
+"version": "2012-04-16", 
+"wrangler": "Mia Grifford"
+}
