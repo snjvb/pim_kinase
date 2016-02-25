@@ -15,16 +15,16 @@ getDesign <- function(file) {
 
     library('plyr')
     mutate(
-        d, 
-        hr = ifelse(er_status_ihc == 'P' | pr_status_ihc == 'P', 'HR+', 'HR-'), 
+        d,
+        hr = ifelse(er_status_ihc == 'P' | pr_status_ihc == 'P', 'HR+', 'HR-'),
         status = ifelse(
             her2_status == 'P', 'HER2+',
             ifelse(
-                er_status_ihc == 'P' | pr_status_ihc == 'P', 'HR+HER2-', 
-                ifelse(er_status_ihc == 'N' & 
-                       pr_status_ihc == 'N' & 
-                       her2_status == 'N', 'TN', NA))), 
-        time = drfs_t, 
+                er_status_ihc == 'P' | pr_status_ihc == 'P', 'HR+HER2-',
+                ifelse(er_status_ihc == 'N' &
+                       pr_status_ihc == 'N' &
+                       her2_status == 'N', 'TN', NA))),
+        time = drfs_t,
         event = drfs_e)
 }
 
@@ -53,7 +53,7 @@ collapseProbes <- function(arrayData, method = 'MaxMean') {
     rowGroup <- temp$ENTREZ_GENE_ID
     rowID <- rownames(temp)
     temp <- temp[, -ncol(temp)]
-    temp <- collapseRows(temp, rowGroup = rowGroup, rowID = rowID, 
+    temp <- collapseRows(temp, rowGroup = rowGroup, rowID = rowID,
                          method = method)
 
     array.data$exprs <- as.data.frame(temp$datETcollapsed)
@@ -70,9 +70,9 @@ syncArrayData <- function(arrayData) {
 }
 
 GSE25066 <- function() {
-    exprs.file <- "~/brca_datasets/gse25066_091114/raw_data/exprs.csv"
-    annot.file <- "~/brca_datasets/gse25066_091114/raw_data/annot.csv"
-    design.file <- "~/brca_datasets/gse25066_091114/raw_data/design.csv"
+    exprs.file <- "~/Workspace/pim_kinase/gse25066_091114/raw_data/exprs.csv"
+    annot.file <- "~/Workspace/pim_kinase/gse25066_091114/raw_data/annot.csv"
+    design.file <- "~/Workspace/pim_kinase/gse25066_091114/raw_data/design.csv"
 
     data <- MicroarrayDataset(exprs.file, annot.file, design.file)
     data <- collapseProbes(data, method = 'MaxMean')

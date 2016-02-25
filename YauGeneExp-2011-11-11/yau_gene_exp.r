@@ -9,15 +9,15 @@ getDesign <- function(file) {
 
     library('plyr')
     REGEX_PATTERN <- 'ER([a-z]+)_ERBB2([a-z]+)'
-    er <- gsub(REGEX_PATTERN, '\\1', d$subGroup)
-    her2 <- gsub(REGEX_PATTERN, '\\2', d$subGroup)
+    er.val <- gsub(REGEX_PATTERN, '\\1', d$subGroup)
+    her2.val <- gsub(REGEX_PATTERN, '\\2', d$subGroup)
 
-    mutate(d, 
-           er_status = ifelse(er == 'pos', 'ER+', 'ER-'), 
-           status = ifelse(her2 == 'pos', 'HER2+', 
-                ifelse(er == 'pos' , 'ER+HER2-', 
-                    ifelse(er == 'neg' & her2 == 'neg', 'ER-HER2-', NA))), 
-           time = t_dmfs, 
+    mutate(d,
+           er_status = ifelse(er.val == 'pos', 'ER+', 'ER-'),
+           status = ifelse(her2.val == 'pos', 'HER2+',
+                ifelse(er.val == 'pos' , 'ER+HER2-',
+                    ifelse(er.val == 'neg' & her2.val == 'neg', 'ER-HER2-', NA))),
+           time = t_dmfs,
            event = e_dmfs)
 }
 
@@ -41,8 +41,8 @@ syncArrayData <- function(arrayData) {
 }
 
 YauGeneExp <- function() {
-    exprs.file <- "~/brca_datasets/YauGeneExp-2011-11-11/raw_data/genomicMatrix"
-    design.file <- "~/brca_datasets/YauGeneExp-2011-11-11/raw_data/clinical_data"
+    exprs.file <- "~/Workspace/pim_kinase/YauGeneExp-2011-11-11/raw_data/genomicMatrix"
+    design.file <- "~/Workspace/pim_kinase/YauGeneExp-2011-11-11/raw_data/clinical_data"
 
     MicroarrayDataset(exprs.file, design.file)
 }

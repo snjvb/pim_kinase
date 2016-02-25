@@ -15,22 +15,22 @@ getDesiredSamples <- function(data) {
 
     library(plyr)
     .data <- mutate(
-        .data, 
-        hr = ifelse(ER_Status_nature2012 == 'Positive' | 
-                    PR_Status_nature2012 == 'Positive', 
-                    'HR+', 'HR-'), 
+        .data,
+        hr = ifelse(ER_Status_nature2012 == 'Positive' |
+                    PR_Status_nature2012 == 'Positive',
+                    'HR+', 'HR-'),
         status = ifelse(
             HER2_Final_Status_nature2012 == 'Positive', 'HER2+',
             ifelse(
-                ER_Status_nature2012 == 'Positive' | 
-                PR_Status_nature2012 == 'Positive', 
-                'HR+HER2-', 
-                ifelse(ER_Status_nature2012 == 'Negative' & 
-                       PR_Status_nature2012 == 'Negative' & 
-                       HER2_Final_Status_nature2012 == 'Negative', 
+                ER_Status_nature2012 == 'Positive' |
+                PR_Status_nature2012 == 'Positive',
+                'HR+HER2-',
+                ifelse(ER_Status_nature2012 == 'Negative' &
+                       PR_Status_nature2012 == 'Negative' &
+                       HER2_Final_Status_nature2012 == 'Negative',
                        'TN', NA))))
 
-    subset(.data, 
+    subset(.data,
            grepl('[Pp]rimary', .data$sample_type) & !is.na(.data$status))
 }
 
@@ -54,8 +54,8 @@ syncData <- function(data) {
 }
 
 TCGA.BRCA <- function() {
-    exprs.file <- "~/brca_datasets/TCGA_BRCA_exp_HiSeqV2-2014-08-28/genomicMatrix"
-    design.file <- "~/brca_datasets/TCGA_BRCA_exp_HiSeqV2-2014-08-28/clinical_data"
+    exprs.file <- "~/Workspace/pim_kinase/TCGA_BRCA_exp_HiSeqV2-2014-08-28/genomicMatrix"
+    design.file <- "~/Workspace/pim_kinase/TCGA_BRCA_exp_HiSeqV2-2014-08-28/clinical_data"
 
     data <- RNASeqDataset(exprs.file, design.file)
 

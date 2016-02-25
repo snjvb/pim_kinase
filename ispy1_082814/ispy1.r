@@ -18,16 +18,16 @@ getDesign <- function(file) {
 
     library('plyr')
     mutate(
-        d, 
-        hr = ifelse(er == 1 | pr == 1, 'HR+', 'HR-'), 
+        d,
+        hr = ifelse(er == 1 | pr == 1, 'HR+', 'HR-'),
         status = ifelse(
             her2 == 1, 'HER2+',
             ifelse(
-                er == 1 | pr == 1, 'HR+HER2-', 
-                ifelse(er == 0 & 
-                       pr == 0 & 
-                       her2 == 0, 'TN', NA))), 
-        time = rfs.t, 
+                er == 1 | pr == 1, 'HR+HER2-',
+                ifelse(er == 0 &
+                       pr == 0 &
+                       her2 == 0, 'TN', NA))),
+        time = rfs.t,
         event = rfs.e)
 }
 
@@ -56,7 +56,7 @@ collapseProbes <- function(arrayData, method = 'MaxMean') {
     rowGroup <- temp$EntrezGeneID
     rowID <- rownames(temp)
     temp <- temp[, -ncol(temp)]
-    temp <- collapseRows(temp, rowGroup = rowGroup, rowID = rowID, 
+    temp <- collapseRows(temp, rowGroup = rowGroup, rowID = rowID,
                          method = method)
 
     array.data$exprs <- as.data.frame(temp$datETcollapsed)
@@ -73,9 +73,9 @@ syncArrayData <- function(arrayData) {
 }
 
 ISPY1 <- function() {
-    exprs.file <- "~/Documents/sanjeev/ispy1_082814/raw_data/exprs.csv"
-    annot.file <- "~/Documents/sanjeev/ispy1_082814/raw_data/annot.txt"
-    design.file <- "~/Documents/sanjeev/ispy1_082814/raw_data/design.csv"
+    exprs.file <- "~/Workspace/pim_kinase/ispy1_082814/raw_data/exprs.csv"
+    annot.file <- "~/Workspace/pim_kinase/ispy1_082814/raw_data/annot.txt"
+    design.file <- "~/Workspace/pim_kinase/ispy1_082814/raw_data/design.csv"
 
     data <- MicroarrayDataset(exprs.file, annot.file, design.file)
     data <- collapseProbes(data, method = 'MaxMean')
