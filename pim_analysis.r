@@ -350,22 +350,22 @@ write.csv(yau.myc.uva, file = 'yau_MYC_univariate_analysis.csv')
 tcga.myc.pim1.corr <- corrAnalysis(as.numeric(tcga$exprs['PIM1', ]),
                                    as.numeric(tcga$exprs['MYC', ]),
                                    factor(tcga$design$status))
-write.csv(tcga.myc.pim1.corr, file = 'tcga_MYC_PIM1_corr.csv'
+write.csv(tcga.myc.pim1.corr, file = 'tcga_MYC_PIM1_corr.csv')
 
 ispy.myc.pim1.corr <- corrAnalysis(as.numeric(ispy1$exprs['5292', ]),
                                    as.numeric(ispy1$exprs['4609', ]),
                                    factor(ispy1$design$status))
-write.csv(ispy.myc.pim1.corr, file = 'ispy1_MYC_PIM1_corr.csv'
+write.csv(ispy.myc.pim1.corr, file = 'ispy1_MYC_PIM1_corr.csv')
 
 gse25066.myc.pim1.corr <- corrAnalysis(as.numeric(gse25066$exprs['5292', ]),
                                        as.numeric(gse25066$exprs['4609', ]),
                                        factor(gse25066$design$status))
-write.csv(gse25066.myc.pim1.corr, file = 'gse25066_MYC_PIM1_corr.csv'
+write.csv(gse25066.myc.pim1.corr, file = 'gse25066_MYC_PIM1_corr.csv')
 
 yau.myc.pim1.corr <- corrAnalysis(as.numeric(yau$exprs['PIM1', ]),
                                   as.numeric(yau$exprs['MYC', ]),
                                   factor(yau$design$status))
-write.csv(yau.myc.pim1.corr, file = 'yau_MYC_PIM1_corr.csv'
+write.csv(yau.myc.pim1.corr, file = 'yau_MYC_PIM1_corr.csv')
 
 
 ##
@@ -402,3 +402,51 @@ yau.df2 <- generateDataForPlot(as.numeric(yau$exprs['CDKN1B', ]),
                                                  'ER-HER2-')))
 drawBarPlot('yau_CDKN1B_exprs_barplot.jpg', yau.df2$plot.data)
 write.csv(yau.df2$significance, file = 'yau_CDKN1B_exprs_pairwise_t.csv')
+
+
+##
+## Correlation between CDKN1B and PIM1
+##
+
+tcga.cdkn1b.pim1.corr <- corrAnalysis(as.numeric(tcga$exprs['PIM1', ]),
+                                      as.numeric(tcga$exprs['CDKN1B', ]),
+                                      factor(tcga$design$status))
+write.csv(tcga.cdkn1b.pim1.corr, file = 'tcga_CDKN1B_PIM1_corr.csv')
+
+ispy.cdkn1b.pim1.corr <- corrAnalysis(as.numeric(ispy1$exprs['5292', ]),
+                                      as.numeric(ispy1$exprs['1027', ]),
+                                      factor(ispy1$design$status))
+write.csv(ispy.cdkn1b.pim1.corr, file = 'ispy1_CDKN1B_PIM1_corr.csv')
+
+gse25066.cdkn1b.pim1.corr <- corrAnalysis(as.numeric(gse25066$exprs['5292', ]),
+                                          as.numeric(gse25066$exprs['1027', ]),
+                                          factor(gse25066$design$status))
+write.csv(gse25066.cdkn1b.pim1.corr, file = 'gse25066_CDKN1B_PIM1_corr.csv')
+
+yau.cdkn1b.pim1.corr <- corrAnalysis(as.numeric(yau$exprs['PIM1', ]),
+                                     as.numeric(yau$exprs['CDKN1B', ]),
+                                     factor(yau$design$status))
+write.csv(yau.cdkn1b.pim1.corr, file = 'yau_CDKN1B_PIM1_corr.csv')
+
+
+##
+## CDKN1B Univariate Analysis
+##
+
+ispy1.cdkn1b.uva <- univariateAnalysis(as.numeric(ispy1$exprs['1027', ]),
+                                       ispy1$design$hr,
+                                       ispy1$design$rfs.t,
+                                       ispy1$design$rfs.e)
+write.csv(ispy1.cdkn1b.uva, file = 'ispy1_CDKN1B_univariate_analysis.csv')
+
+gse25066.cdkn1b.uva <- univariateAnalysis(as.numeric(gse25066$exprs['1027', ]),
+                                          gse25066$design$hr,
+                                          gse25066$design$drfs_t,
+                                          gse25066$design$drfs_e)
+write.csv(gse25066.cdkn1b.uva, file = 'gse25066_CDKN1B_univariate_analysis.csv')
+
+yau.cdkn1b.uva <- univariateAnalysis(as.numeric(yau$exprs['CDKN1B', ]),
+                                     yau$design$er_status,
+                                     yau$design$t_dmfs,
+                                     yau$design$e_dmfs)
+write.csv(yau.cdkn1b.uva, file = 'yau_CDKN1B_univariate_analysis.csv')
